@@ -26,7 +26,7 @@ public class TestEntityIdentityScopeTest extends TestEntityTest {
         setIdentityScopeBeforeSetUp(new IdentityScopeLong<TestEntity>());
         super.setUp();
     }
-
+//TODO
     public void testLoadIdScope() {
         TestEntity entity = createEntity(null);
         dao.insert(entity);
@@ -49,7 +49,7 @@ public class TestEntityIdentityScopeTest extends TestEntityTest {
         assertNotSame(entity2, entity3);
         assertNotSame(entity, entity3);
     }
-
+//TODO
     public void testDetachOther() {
         TestEntity entity = createEntity(null);
         dao.insert(entity);
@@ -60,7 +60,7 @@ public class TestEntityIdentityScopeTest extends TestEntityTest {
 
         assertSame(entity2, entity3);
     }
-
+//TODO
     public void testLoadAllScope() {
         TestEntity entity = createEntity(null);
         dao.insert(entity);

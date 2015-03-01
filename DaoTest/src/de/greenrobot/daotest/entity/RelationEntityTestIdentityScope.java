@@ -33,7 +33,7 @@ public class RelationEntityTestIdentityScope extends RelationEntityTest {
         identityScopeTypeForSession = IdentityScopeType.Session;
         super.setUp();
     }
-
+//TODO
     public void testToOneLoadDeepIdentityScope() {
         RelationEntity entity = insertEntityWithRelations(42l);
         RelationEntity entity2 = insertEntityWithRelations(42l);
@@ -44,7 +44,7 @@ public class RelationEntityTestIdentityScope extends RelationEntityTest {
         assertTestEntity(entity2);
         assertSame(entity.getTestEntity(), entity2.getTestEntity());
     }
-
+//TODO
     public void testToQueryDeepIdentityScope() {
         insertEntityWithRelations(42l);
         RelationEntity entity2 = insertEntityWithRelations(42l);
@@ -57,7 +57,7 @@ public class RelationEntityTestIdentityScope extends RelationEntityTest {
         assertTestEntity(entity2);
         assertSame(entity.getTestEntity(), entity2.getTestEntity());
     }
-
+//TODO
     public void testLoadDeepIdentityScope() {
         RelationEntity entity = insertEntityWithRelations(42l);
         RelationEntity entity2 = dao.loadDeep(entity.getId());
@@ -66,7 +66,7 @@ public class RelationEntityTestIdentityScope extends RelationEntityTest {
         assertSame(entity, entity3);
         assertTestEntity(entity);
     }
-
+//TODO
     public void testQueryDeepIdentityScope() {
         RelationEntity entity = insertEntityWithRelations(42l);
 

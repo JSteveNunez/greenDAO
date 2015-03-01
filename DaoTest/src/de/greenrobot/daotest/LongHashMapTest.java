@@ -55,6 +55,21 @@ public class LongHashMapTest extends TestCase {
 
     }
 
+//    public void testCapacity() {
+//        LongHashMap<Object> map = new LongHashMap<Object>();
+//
+//        for(long x = 0; x<10000000l; x++) {
+//            map.put(x,"");
+//        }
+//
+//        map = new LongHashMap<Object>();
+//
+//        for(long x = 0; x<10000000l; x++) {
+//            map.put(x,"");
+//        }
+//        assertTrue(true);
+//    }
+
     public void testLongHashMapRandom() {
         LongHashMap<Object> map = new LongHashMap<Object>();
         for (int i = 0; i < 5000; i++) {

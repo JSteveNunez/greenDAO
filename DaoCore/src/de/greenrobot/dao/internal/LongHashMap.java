@@ -42,6 +42,7 @@ public final class LongHashMap<T> {
 
     private Entry<T>[] table;
     private int capacity;
+    private final int MAX_CAPACITY=10000;
     private int threshold;
     private int size;
 
@@ -87,10 +88,15 @@ public final class LongHashMap<T> {
                 return oldValue;
             }
         }
-        table[index] = new Entry<T>(key, value, entryOriginal);
-        size++;
-        if (size > threshold) {
-            setCapacity(2 * capacity);
+        if(size<threshold) {
+            table[index] = new Entry<T>(key, value, entryOriginal);
+            size++;
+            if (size > threshold) {
+                int newCapacity = 2 * capacity;
+                if(newCapacity>MAX_CAPACITY)
+                    newCapacity=MAX_CAPACITY;
+                setCapacity(newCapacity);
+            }
         }
         return null;
     }
@@ -144,6 +150,8 @@ public final class LongHashMap<T> {
         table = newTable;
         capacity = newCapacity;
         threshold = newCapacity * 4 / 3;
+        if (capacity==MAX_CAPACITY)
+            threshold=MAX_CAPACITY;
     }
 
     /** Target load: 0,6 */

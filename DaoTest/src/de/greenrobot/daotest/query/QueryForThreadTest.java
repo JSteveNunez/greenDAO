@@ -52,6 +52,7 @@ public class QueryForThreadTest extends TestEntityTestBase {
         TestEntity entityFor1 = query.unique();
     }
 
+    //TODO
     public void testGetForCurrentThread_ManyThreadsDontLeak() throws Exception {
         QueryBuilder<TestEntity> builder = dao.queryBuilder().where(Properties.SimpleInteger.eq("dummy"));
         final Query<TestEntity> query = builder.build();

@@ -26,7 +26,7 @@ public class StringKeyValueEntityIdentityScopeTest extends StringKeyValueEntityT
         setIdentityScopeBeforeSetUp(new IdentityScopeObject<String, StringKeyValueEntity>());
         super.setUp();
     }
-
+//TODO
     public void testLoadIdScope() {
         StringKeyValueEntity entity = createEntityWithRandomPk();
         dao.insert(entity);
@@ -36,7 +36,7 @@ public class StringKeyValueEntityIdentityScopeTest extends StringKeyValueEntityT
         assertSame(entity, entity2);
         assertSame(entity2, entity3);
     }
-
+//TODO
     public void testLoadIdScope_load() {
         StringKeyValueEntity entity = createEntityWithRandomPk();
         dao.insert(entity);
@@ -60,7 +60,7 @@ public class StringKeyValueEntityIdentityScopeTest extends StringKeyValueEntityT
         assertNotSame(entity2, entity3);
         assertNotSame(entity, entity3);
     }
-
+//TODO
     public void testDetachOther() {
         StringKeyValueEntity entity = createEntityWithRandomPk();
         dao.insert(entity);
@@ -71,7 +71,7 @@ public class StringKeyValueEntityIdentityScopeTest extends StringKeyValueEntityT
 
         assertSame(entity2, entity3);
     }
-
+//TODO
     public void testLoadAllScope() {
         StringKeyValueEntity entity = createEntityWithRandomPk();
         dao.insert(entity);

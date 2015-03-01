@@ -48,10 +48,12 @@ public class AnActiveEntityMultithreadingTest extends AbstractDaoSessionTest<Dao
         dao = daoSession.getAnActiveEntityDao();
     }
 
+    //TODO
     public void testAlwaysAttachedWithInsertDelete() throws Exception {
         doTestAlwaysAttached(new InsertDeleteThread());
     }
 
+    //TODO
     public void testAlwaysAttachedWithDetach() throws Exception {
         doTestAlwaysAttached(new DetachThread());
     }

@@ -33,7 +33,7 @@ public class DaoSessionTest extends AbstractDaoSessionTest<DaoMaster, DaoSession
         SimpleEntity entity2 = daoSession.load(SimpleEntity.class, id);
         assertNotNull(entity2);
     }
-
+//TODO
     public void testIdentity() {
         SimpleEntity entity = new SimpleEntity();
         daoSession.insert(entity);
